@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Medicare Mpigi Blog</title>
 <link rel="icon" type="image/png" href="https://medicarehospital-mpigi.org/wp-content/uploads/2020/03/logo.png">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
 
 <style>:root {
     --primary:#0b5ed7;
@@ -60,9 +61,11 @@ img {
 }
 
 body {
-    font-family:'Poppins', sans-serif;
+    font-family:'Inter', sans-serif; /* 👈 better reading font */
     background:var(--bg);
     color:var(--text);
+    line-height:1.75;
+    font-size:15px;
 }
 
 /* HEADER */
@@ -74,26 +77,31 @@ header {
     padding:60px 20px;
 }
 
-.header-content {
-    max-width:1100px;
+.header-content,
+.nav-container,
+.bottom-content {
+    max-width:900px;
     margin:auto;
-    display:flex;
-    align-items:center;
-    gap:20px;
 }
 
 .header-content img {
     width:70px;
 }
 
+/* MAIN TITLE (strong + clean) */
 .header-text h1 {
-    font-size:32px;
+    font-family:'Poppins', sans-serif;
+    font-size:34px;
+    font-weight:700;
+    letter-spacing:-0.5px;
 }
 
+/* SUBTEXT */
 .header-text p {
+    font-family:'Inter', sans-serif;
+    font-size:15px;
     opacity:0.9;
 }
-
 /* NAV */
 nav {
     position:sticky;
@@ -156,11 +164,10 @@ nav {
     cursor:pointer;
 }
 
-/* CONTAINER */
 .container {
-    max-width:1100px;
-    margin:20px auto;
-    padding:10px;
+    max-width:720px; /* 👈 narrower content */
+    margin:40px auto; /* more breathing space */
+    padding:0 16px; /* safe spacing on small screens */
 }
 
 /* POSTS - OPTION 2 (FLAT / NO CARDS) */
@@ -336,7 +343,73 @@ footer {
 
 #themeToggle:hover {
     background:var(--accent);
+}
+/* BOTTOM SECTION */
+.bottom-section {
+    background:linear-gradient(135deg,#0b5ed7,#084298);
+    color:white;
+    padding:30px 15px;
+    margin-top:40px;
+}
+
+.bottom-content {
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+/* BRAND */
+.bottom-brand {
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.bottom-brand img {
+    width:45px;
+}
+
+.bottom-brand h2 {
+    font-size:20px;
+}
+
+/* LINKS */
+.bottom-links {
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.bottom-links a {
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    opacity:0.9;
+    transition:0.3s;
+}
+
+.bottom-links a:hover {
+    opacity:1;
+    text-decoration:underline;
+}
+.bottom-content {
+    flex-direction:column;
+    text-align:center;
+}
+
+.bottom-links {
+    justify-content:center;
 }</style>
+
+
+
+
+
+
 </head>
 
 <body>
@@ -552,6 +625,30 @@ footer {
 <div class="meta">March 9, 2023</div>
 </div>
 
+</div>
+
+<div class="bottom-section">
+    <div class="bottom-content">
+
+        <!-- Logo + Name -->
+        <div class="bottom-brand">
+            <img src="logo.png" alt="logo">
+            <h2>Medicare Mpigi</h2>
+        </div>
+
+        <!-- Links -->
+        <div class="bottom-links">
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+            <a href="#">FAQs</a>
+            <a href="#">Authors</a>
+            <a href="#">Events</a>
+            <a href="#">Shop</a>
+            <a href="#">Patterns</a>
+            <a href="#">Themes</a>
+        </div>
+
+    </div>
 </div>
 <footer>
 <p>© 2026 Medicare Mpigi | Clean Modern Health Platform</p>
