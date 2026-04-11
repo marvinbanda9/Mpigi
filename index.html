@@ -7,13 +7,13 @@
 <link rel="icon" type="image/png" href="https://medicarehospital-mpigi.org/wp-content/uploads/2020/03/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-    :root {
+<style>:root {
     --primary:#0b5ed7;
     --accent:#4dabf7;
     --bg:#f4f7fb;
     --text:#1f2d3d;
 }
+
 /* DARK MODE */
 body.dark-mode {
     --bg:#0f172a;
@@ -21,7 +21,6 @@ body.dark-mode {
     --primary:#4dabf7;
 }
 
-/* elements that need switching */
 body.dark-mode nav {
     background:rgba(15,23,42,0.9);
 }
@@ -44,10 +43,20 @@ body.dark-mode textarea {
     color:white;
     border:1px solid #334155;
 }
+
+/* RESET */
 * {
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+/* GLOBAL IMAGE FIX (REDUCED SPACING) */
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
 }
 
 body {
@@ -147,57 +156,66 @@ nav {
     cursor:pointer;
 }
 
-/* CONTAINER (reduced outer spacing) */
+/* CONTAINER */
 .container {
     max-width:1100px;
     margin:20px auto;
     padding:10px;
 }
 
-/* POSTS (cards tightened) */
+/* POSTS - OPTION 2 (FLAT / NO CARDS) */
 .post {
-    background:white;
-    padding:18px; /* reduced */
-    margin-bottom:20px; /* reduced */
-    border-radius:8px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.04); /* lighter */
-    transition:0.3s;
+    margin-bottom:30px;
+    padding-bottom:20px;
+    border-bottom:1px solid #ddd;
 }
 
 .post:hover {
-    transform:translateY(-3px); /* softer hover */
+    transform:none; /* remove card hover effect */
 }
 
 .post img {
     width:100%;
-    border-radius:8px;
-    margin-bottom:12px; /* reduced */
+    border-radius:0; /* remove rounded look */
+    margin:0 0 10px 0;
 }
 
 .post h2 {
     color:var(--primary);
-    margin-bottom:5px;
+    margin-bottom:6px;
     font-size:20px;
+}
+
+.post h2:hover {
+    text-decoration:underline;
+    cursor:pointer;
 }
 
 .meta {
     font-size:13px;
     color:gray;
-    margin-bottom:10px; /* reduced */
+    margin-bottom:6px;
     font-style:italic;
 }
 
 .post p {
     line-height:1.6;
-    margin-bottom:10px; /* reduced */
+    margin-bottom:8px;
     font-size:14px;
 }
 
 blockquote {
     background:#eef4ff;
-    border-left:3px solid var(--primary); /* thinner */
-    padding:12px;
-    margin:15px 0;
+    border-left:3px solid var(--primary);
+    padding:10px;
+    margin:12px 0;
+    border-radius:4px;
+}
+blockquote {
+    background:#eef4ff;
+    border-left:3px solid var(--primary);
+    padding:10px;
+    margin:12px 0;
     border-radius:6px;
 }
 
@@ -239,7 +257,7 @@ blockquote {
     right: 20px;
     width: 230px;
     background:white;
-    border:1px solid #ddd; /* softer border */
+    border:1px solid #ddd;
     border-radius:10px;
     box-shadow:0 6px 18px rgba(0,0,0,0.08);
     padding:12px;
@@ -278,7 +296,7 @@ blockquote {
 footer {
     background:linear-gradient(135deg,#0b5ed7,#084298);
     color:white;
-    padding:30px 15px; /* slightly reduced */
+    padding:25px 15px;
     text-align:center;
 }
 
@@ -305,6 +323,7 @@ footer {
     .menu-btn { display:block; }
 }
 
+/* THEME BUTTON */
 #themeToggle {
     background:var(--primary);
     color:white;
@@ -317,8 +336,7 @@ footer {
 
 #themeToggle:hover {
     background:var(--accent);
-}
-</style>
+}</style>
 </head>
 
 <body>
@@ -389,7 +407,7 @@ footer {
 <div class="post">
 <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG_5DA85B3E2A3D-1-1200x800-1-280x180.jpeg">
 <h2>UGANDA LAUNCHES A 6 MONTHS POST EBOLA RECOVERY PLAN</h2>
-<div class="meta">February 8, 2023</div>
+
 
 <p>The plan is aimed at strengthening and building all-inclusive health systems that will be instrumental in preventing future viral disease outbreaks</p>
 
@@ -419,13 +437,13 @@ footer {
 
 <p>By Kanshabe Caroline.</p>
 </div>
-
+<div class="meta">March 9, 2023</div>
 
 <!-- POST 3 -->
 <div class="post">
 <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG-8089-1200x800-1-280x180.jpg">
 <h2>PUBLIC SENSITIZED ON CONDOM USE AHEAD OF INTERNATIONAL CONDOM DAY</h2>
-<div class="meta">February 9, 2023</div>
+
 
 <p>Kampala – 9th February 2023; The Ministry of Health is partnering with the AIDS Healthcare Foundation (AHF) to mark the International Condom Day (ICD).</p>
 
@@ -452,6 +470,7 @@ footer {
 <p>She encouraged distributers of condoms to always educate people on how to use them and to find out which community consumes more so that they distribute enough condoms.</p>
 
 <p>By Nakabugo Cathy.</p>
+<div class="meta">March 9, 2023</div>
 </div>
 
 
@@ -459,7 +478,7 @@ footer {
 <div class="post">
 <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG_2680-1200x800-1-280x180.jpg">
 <h2>UGANDA LAUNCHES THE FIRST EVER NATIONAL COMMUNITY HEALTH STRATEGY</h2>
-<div class="meta">February 9, 2023</div>
+
 
 <p>Kampala; 9 February 2023 – As part of the activities to mark the Community Health Week, the first ever National Community Health Strategy (NCHS) (2021/22 – 2025/26) was launched today by the Minister for Health, Dr. Jane Ruth Aceng Ocero at Speke Resort, Munyonyo. This strategy is anchored in the Parish Development Model and will ensure accessible services for all persons right from the grassroot level.</p>
 
@@ -481,13 +500,13 @@ footer {
 
 <p>Service Delivery Health Workforce Information Systems Supply Chain Systems Health Financing Leadership and Governance</p>
 </div>
-
+<div class="meta">March 9, 2023</div>
 
 <!-- POST 5 -->
 <div class="post">
 <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/PHOTO-2023-02-20-21-05-15-280x180.jpg">
 <h2>UCREEP UNDERGOES MID TERM REVIEW</h2>
-<div class="meta">February 20, 2023</div>
+
 
 <p>Kampala – 20th February 2023; The Uganda COVID-19 Response and Emergency Preparedness Project (UCREEP) currently being implemented by the Ministry of Health is undergoing a three day midterm review with the aim of analyzing the progress and performance of the project.</p>
 
@@ -530,7 +549,7 @@ footer {
 <p>Component 5: Strengthening Continuity of Essential Health Services</p>
 
 <p>The four-year project will close on December 31, 2024.</p>
-
+<div class="meta">March 9, 2023</div>
 </div>
 
 </div>
