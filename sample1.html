@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medicare Mpigi | Health Hub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#0f766e;
+    --accent:#22c55e;
+    --bg:#f8fafc;
+    --card:#ffffff;
+    --text:#0f172a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Outfit',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:white;
+    box-shadow:0 2px 12px rgba(0,0,0,0.05);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{ width:40px; }
+
+.logo span{
+    font-weight:600;
+    color:var(--primary);
+}
+
+/* HERO */
+.hero{
+    padding:80px 30px;
+    background:linear-gradient(135deg,var(--primary),#134e4a);
+    color:white;
+    text-align:center;
+}
+
+/* WRAPPER */
+.wrapper{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* TOP SECTION */
+.top-section{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+}
+
+/* FEATURE */
+.featured{
+    background:var(--card);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.slideshow{
+    position:relative;
+    height:260px;
+    background:#e2e8f0;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    opacity:0;
+    transition:opacity 1s ease;
+}
+
+.slide.active{
+    opacity:1;
+}
+
+.featured-content{
+    padding:20px;
+}
+
+/* SIDE CARDS */
+.side-posts{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+    cursor:pointer;
+}
+
+.card-header{
+    display:flex;
+    gap:10px;
+    padding:12px;
+    align-items:center;
+}
+
+.card img{
+    width:70px;
+    height:55px;
+    object-fit:contain;
+    background:#e2e8f0;
+    border-radius:6px;
+}
+
+.card-body{
+    max-height:0;
+    overflow:hidden;
+    padding:0 12px;
+    transition:0.4s;
+}
+
+.card.active .card-body{
+    max-height:200px;
+    padding:10px 12px;
+}
+
+/* SECTIONS */
+.section{
+    margin-top:50px;
+}
+
+.section h2{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.service{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* CONTACT */
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.contact-box{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* 🔥 BOTTOM POSTS (RESTORED) */
+.bottom-posts{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.bottom-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+    cursor:pointer;
+}
+
+.bottom-card img{
+    width:100%;
+    height:160px;
+    object-fit:contain;
+    background:#e2e8f0;
+}
+
+.bottom-card h3{
+    padding:15px;
+    color:var(--primary);
+    font-size:16px;
+}
+
+.bottom-card .content{
+    max-height:0;
+    overflow:hidden;
+    padding:0 15px;
+    transition:0.4s;
+}
+
+.bottom-card.active .content{
+    max-height:300px;
+    padding:0 15px 15px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:40px;
+    background:#0f766e;
+    color:white;
+    padding:30px;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+    .top-section{
+        grid-template-columns:1fr;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">
+        <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2020/03/logo.png">
+        <span>Medicare Mpigi</span>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Quality Healthcare for Our Community</h1>
+</section>
+
+<div class="wrapper">
+
+<!-- TOP -->
+<div class="top-section">
+
+<!-- FEATURED -->
+<div class="featured">
+    <div class="slideshow">
+        <img class="slide active" src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/PHOTO-2023-02-07-09-17-41-1200x800-1-280x180.jpg">
+        <img class="slide" src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG_5DA85B3E2A3D-1-1200x800-1-280x180.jpeg">
+        <img class="slide" src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG-8089-1200x800-1-280x180.jpg">
+    </div>
+
+    <div class="featured-content">
+        <h2>Latest Health Updates</h2>
+        <p>Stay informed with healthcare programs and initiatives from Uganda’s health sector.</p>
+    </div>
+</div>
+
+<!-- SIDE POSTS -->
+<div class="side-posts">
+
+    <!-- POST 1 -->
+    <div class="card" onclick="toggleCard(this)">
+        <div class="card-header">
+            <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/PHOTO-2023-02-07-09-17-41-1200x800-1-280x180.jpg">
+            <h3>Kiruddu Hospital Receives German Medical Equipment Boost</h3>
+        </div>
+        <div class="card-body">
+            <p>Germany donated ventilators worth €160,000 to improve ICU services in Uganda, strengthening critical care capacity.</p>
+        </div>
+    </div>
+
+    <!-- POST 2 -->
+    <div class="card" onclick="toggleCard(this)">
+        <div class="card-header">
+            <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG_5DA85B3E2A3D-1-1200x800-1-280x180.jpeg">
+            <h3>Uganda Launches 6-Month Ebola Recovery Plan</h3>
+        </div>
+        <div class="card-body">
+            <p>The Ministry of Health launched a recovery plan focusing on surveillance, infection control, and outbreak preparedness.</p>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>About Us</h2>
+    <p>Medicare Mpigi provides accessible and quality healthcare to communities.</p>
+</div>
+
+<!-- LATEST NEWS -->
+<div class="section">
+    <h2>Latest News & Updates</h2>
+
+    <div class="bottom-posts">
+
+        <!-- POST 3 -->
+        <div class="bottom-card" onclick="toggleBottom(this)">
+            <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG-8089-1200x800-1-280x180.jpg">
+            <h3>Condom Awareness Campaign</h3>
+            <div class="content">
+                <p>Ministry of Health and partners sensitized the public on condom use ahead of International Condom Day to reduce HIV and STIs.</p>
+            </div>
+        </div>
+
+        <!-- POST 4 -->
+        <div class="bottom-card" onclick="toggleBottom(this)">
+            <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/IMG_2680-1200x800-1-280x180.jpg">
+            <h3>National Community Health Strategy Launched</h3>
+            <div class="content">
+                <p>Uganda launched its first national community health strategy to strengthen grassroots health systems and improve service delivery.</p>
+            </div>
+        </div>
+
+        <!-- POST 5 -->
+        <div class="bottom-card" onclick="toggleBottom(this)">
+            <img src="https://medicarehospital-mpigi.org/wp-content/uploads/2023/03/PHOTO-2023-02-20-21-05-15-280x180.jpg">
+            <h3>UCREEP Mid-Term Review Underway</h3>
+            <div class="content">
+                <p>The Uganda COVID-19 Response Project is being reviewed to assess progress in strengthening emergency preparedness systems.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+<footer>
+    <p>© 2026 Medicare Mpigi</p>
+</footer>
+
+<script>
+function toggleCard(selected){
+    document.querySelectorAll(".card").forEach(card=>{
+        if(card!==selected) card.classList.remove("active");
+    });
+    selected.classList.toggle("active");
+}
+
+function toggleBottom(selected){
+    document.querySelectorAll(".bottom-card").forEach(card=>{
+        if(card!==selected) card.classList.remove("active");
+    });
+    selected.classList.toggle("active");
+}
+
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+setInterval(()=>{
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+},4000);
+</script>
+
+</body>
+</html>
